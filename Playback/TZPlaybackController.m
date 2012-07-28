@@ -1,14 +1,16 @@
 #import "TZPlaybackController.h"
 #import "TZSamplerPreset.h"
+#import "TZPalette.h"
 
 @interface TZPlaybackController ()
 @property(strong) IBOutlet UIButton *holdButton;
+@property(strong) IBOutletCollection(UIButton) NSArray *sampleButtons;
 @property(assign) NSUInteger lastSampleIndex;
 @property(strong) NSMutableSet *heldSamples;
 @end
 
 @implementation TZPlaybackController
-@synthesize holdButton, samplerPreset, heldSamples, lastSampleIndex;
+@synthesize holdButton, samplerPreset, heldSamples, lastSampleIndex, sampleButtons;
 
 #pragma mark Initialization
 
@@ -23,6 +25,8 @@
 {
     [super viewDidLoad];
     [holdButton setEnabled:NO];
+    for (UIButton *button in sampleButtons)
+        [button setBackgroundColor:[TZPalette colorForSampleWithIndex:[button tag]]];
 }
 
 #pragma mark Input
@@ -33,9 +37,7 @@
     NSLog(@"Button #%i down.", index);
     [self setLastSampleIndex:index];
     [[samplerPreset sampleAtIndex:index] play];
-    [holdButton setBackgroundImage:
-        [button backgroundImageForState:UIControlStateNormal]
-        forState:UIControlStateNormal];
+    [holdButton setBackgroundColor:[button backgroundColor]];
     [holdButton setEnabled:YES];
 }
 
@@ -51,7 +53,7 @@
             [button setHighlighted:YES];
         });
     }
-    [holdButton setBackgroundImage:[UIImage imageNamed:@"tex0"] forState:UIControlStateNormal];
+    [holdButton setBackgroundColor:[UIColor grayColor]];
     [holdButton setEnabled:NO];
 }
 

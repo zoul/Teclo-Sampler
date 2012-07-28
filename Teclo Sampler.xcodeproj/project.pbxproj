@@ -7,13 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D7B6D7015C430B0001A49A1 /* tex1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D7B6D6A15C430B0001A49A1 /* tex1.png */; };
-		0D7B6D7115C430B0001A49A1 /* tex2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D7B6D6B15C430B0001A49A1 /* tex2.png */; };
-		0D7B6D7215C430B0001A49A1 /* tex3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D7B6D6C15C430B0001A49A1 /* tex3.png */; };
-		0D7B6D7315C430B0001A49A1 /* tex4.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D7B6D6D15C430B0001A49A1 /* tex4.png */; };
-		0D7B6D7415C430B0001A49A1 /* tex5.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D7B6D6E15C430B0001A49A1 /* tex5.png */; };
-		0D7B6D7515C430B0001A49A1 /* tex6.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D7B6D6F15C430B0001A49A1 /* tex6.png */; };
-		0D7B6D7815C4314E001A49A1 /* tex0.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D7B6D7715C4314E001A49A1 /* tex0.png */; };
+		0D7B6D7B15C432A4001A49A1 /* TZPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B6D7A15C432A4001A49A1 /* TZPalette.m */; };
 		0D8E02EC15C42034000DD4EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8E02EB15C42034000DD4EE /* UIKit.framework */; };
 		0D8E02EE15C42034000DD4EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8E02ED15C42034000DD4EE /* Foundation.framework */; };
 		0D8E02F015C42034000DD4EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8E02EF15C42034000DD4EE /* CoreGraphics.framework */; };
@@ -32,13 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0D7B6D6A15C430B0001A49A1 /* tex1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tex1.png; sourceTree = "<group>"; };
-		0D7B6D6B15C430B0001A49A1 /* tex2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tex2.png; sourceTree = "<group>"; };
-		0D7B6D6C15C430B0001A49A1 /* tex3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tex3.png; sourceTree = "<group>"; };
-		0D7B6D6D15C430B0001A49A1 /* tex4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tex4.png; sourceTree = "<group>"; };
-		0D7B6D6E15C430B0001A49A1 /* tex5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tex5.png; sourceTree = "<group>"; };
-		0D7B6D6F15C430B0001A49A1 /* tex6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tex6.png; sourceTree = "<group>"; };
-		0D7B6D7715C4314E001A49A1 /* tex0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tex0.png; sourceTree = "<group>"; };
+		0D7B6D7915C432A4001A49A1 /* TZPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TZPalette.h; path = Rendering/TZPalette.h; sourceTree = SOURCE_ROOT; };
+		0D7B6D7A15C432A4001A49A1 /* TZPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TZPalette.m; path = Rendering/TZPalette.m; sourceTree = SOURCE_ROOT; };
 		0D8E02E715C42034000DD4EE /* Teclo Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Teclo Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D8E02EB15C42034000DD4EE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0D8E02ED15C42034000DD4EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -78,24 +67,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0D7B6D6915C430B0001A49A1 /* Textures */ = {
+		0D7B6D7C15C432A8001A49A1 /* Rendering */ = {
 			isa = PBXGroup;
 			children = (
-				0D7B6D7715C4314E001A49A1 /* tex0.png */,
-				0D7B6D6A15C430B0001A49A1 /* tex1.png */,
-				0D7B6D6B15C430B0001A49A1 /* tex2.png */,
-				0D7B6D6C15C430B0001A49A1 /* tex3.png */,
-				0D7B6D6D15C430B0001A49A1 /* tex4.png */,
-				0D7B6D6E15C430B0001A49A1 /* tex5.png */,
-				0D7B6D6F15C430B0001A49A1 /* tex6.png */,
+				0D7B6D7915C432A4001A49A1 /* TZPalette.h */,
+				0D7B6D7A15C432A4001A49A1 /* TZPalette.m */,
 			);
-			path = Textures;
+			name = Rendering;
+			path = Application;
 			sourceTree = "<group>";
 		};
 		0D8E02DC15C42034000DD4EE = {
 			isa = PBXGroup;
 			children = (
 				0D8E031F15C425CD000DD4EE /* Model */,
+				0D7B6D7C15C432A8001A49A1 /* Rendering */,
 				0D8E031E15C421D9000DD4EE /* Playback */,
 				0D8E030715C4206B000DD4EE /* Application */,
 				0D8E032515C4270B000DD4EE /* Resources */,
@@ -168,7 +154,6 @@
 		0D8E032515C4270B000DD4EE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				0D7B6D6915C430B0001A49A1 /* Textures */,
 				0D8E032615C4270B000DD4EE /* Samples */,
 			);
 			path = Resources;
@@ -243,13 +228,6 @@
 				0D8E032E15C4270B000DD4EE /* 3.wav in Resources */,
 				0D8E032F15C4270B000DD4EE /* 4.wav in Resources */,
 				0D8E033015C4270B000DD4EE /* sitar.wav in Resources */,
-				0D7B6D7015C430B0001A49A1 /* tex1.png in Resources */,
-				0D7B6D7115C430B0001A49A1 /* tex2.png in Resources */,
-				0D7B6D7215C430B0001A49A1 /* tex3.png in Resources */,
-				0D7B6D7315C430B0001A49A1 /* tex4.png in Resources */,
-				0D7B6D7415C430B0001A49A1 /* tex5.png in Resources */,
-				0D7B6D7515C430B0001A49A1 /* tex6.png in Resources */,
-				0D7B6D7815C4314E001A49A1 /* tex0.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +243,7 @@
 				0D8E031315C420BF000DD4EE /* TZAppFactory.m in Sources */,
 				0D8E031B15C42186000DD4EE /* TZPlaybackController.m in Sources */,
 				0D8E032215C425EF000DD4EE /* TZSamplerPreset.m in Sources */,
+				0D7B6D7B15C432A4001A49A1 /* TZPalette.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,8 @@
 		0D8E030E15C4206B000DD4EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8E030915C4206B000DD4EE /* AppDelegate.m */; };
 		0D8E031015C4206B000DD4EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8E030C15C4206B000DD4EE /* main.m */; };
 		0D8E031315C420BF000DD4EE /* TZAppFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8E031215C420BF000DD4EE /* TZAppFactory.m */; };
+		0D8E031B15C42186000DD4EE /* TZPlaybackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8E031915C42186000DD4EE /* TZPlaybackController.m */; };
+		0D8E031C15C42186000DD4EE /* TZPlaybackController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D8E031A15C42186000DD4EE /* TZPlaybackController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,9 @@
 		0D8E030D15C4206B000DD4EE /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
 		0D8E031115C420BF000DD4EE /* TZAppFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAppFactory.h; sourceTree = "<group>"; };
 		0D8E031215C420BF000DD4EE /* TZAppFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAppFactory.m; sourceTree = "<group>"; };
+		0D8E031815C42186000DD4EE /* TZPlaybackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TZPlaybackController.h; path = Playback/TZPlaybackController.h; sourceTree = SOURCE_ROOT; };
+		0D8E031915C42186000DD4EE /* TZPlaybackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TZPlaybackController.m; path = Playback/TZPlaybackController.m; sourceTree = SOURCE_ROOT; };
+		0D8E031A15C42186000DD4EE /* TZPlaybackController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TZPlaybackController.xib; path = Playback/TZPlaybackController.xib; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +51,7 @@
 		0D8E02DC15C42034000DD4EE = {
 			isa = PBXGroup;
 			children = (
+				0D8E031E15C421D9000DD4EE /* Playback */,
 				0D8E030715C4206B000DD4EE /* Application */,
 				0D8E030A15C4206B000DD4EE /* Support */,
 				0D8E02EA15C42034000DD4EE /* Frameworks */,
@@ -90,6 +96,17 @@
 				0D8E030D15C4206B000DD4EE /* Prefix.pch */,
 			);
 			path = Support;
+			sourceTree = "<group>";
+		};
+		0D8E031E15C421D9000DD4EE /* Playback */ = {
+			isa = PBXGroup;
+			children = (
+				0D8E031815C42186000DD4EE /* TZPlaybackController.h */,
+				0D8E031915C42186000DD4EE /* TZPlaybackController.m */,
+				0D8E031A15C42186000DD4EE /* TZPlaybackController.xib */,
+			);
+			name = Playback;
+			path = Application;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,6 +160,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D8E031C15C42186000DD4EE /* TZPlaybackController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +174,7 @@
 				0D8E030E15C4206B000DD4EE /* AppDelegate.m in Sources */,
 				0D8E031015C4206B000DD4EE /* main.m in Sources */,
 				0D8E031315C420BF000DD4EE /* TZAppFactory.m in Sources */,
+				0D8E031B15C42186000DD4EE /* TZPlaybackController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,6 +199,7 @@
 					"$(inherited)",
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -199,6 +219,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
@@ -215,6 +236,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Support/Prefix.pch;
 				INFOPLIST_FILE = Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -226,6 +248,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Support/Prefix.pch;
 				INFOPLIST_FILE = Support/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

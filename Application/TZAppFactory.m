@@ -1,16 +1,28 @@
 #import "TZAppFactory.h"
+#import "TZPlaybackController.h"
 
 @implementation TZAppFactory
 
+- (TZPlaybackController*) buildPlaybackController
+{
+    TZPlaybackController *controller = [[TZPlaybackController alloc] initWithNibName:nil bundle:nil];
+    return controller;
+}
+
 - (UIViewController*) buildRootViewController
 {
-    return nil;
+    UINavigationController *controller = [[UINavigationController alloc]
+        initWithRootViewController:[self buildPlaybackController]];
+    [controller setNavigationBarHidden:YES];
+    return controller;
 }
 
 - (UIWindow*) buildMainWindow
 {
     CGRect fullScreenFrame = [[UIScreen mainScreen] bounds];
-    return [[UIWindow alloc] initWithFrame:fullScreenFrame];
+    UIWindow *window = [[UIWindow alloc] initWithFrame:fullScreenFrame];
+    [window setRootViewController:[self buildRootViewController]];
+    return window;
 }
 
 @end

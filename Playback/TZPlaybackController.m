@@ -33,6 +33,9 @@
     NSLog(@"Button #%i down.", index);
     [self setLastSampleIndex:index];
     [[samplerPreset sampleAtIndex:index] play];
+    [holdButton setBackgroundImage:
+        [button backgroundImageForState:UIControlStateNormal]
+        forState:UIControlStateNormal];
     [holdButton setEnabled:YES];
 }
 
@@ -48,6 +51,7 @@
             [button setHighlighted:YES];
         });
     }
+    [holdButton setBackgroundImage:[UIImage imageNamed:@"tex0"] forState:UIControlStateNormal];
     [holdButton setEnabled:NO];
 }
 

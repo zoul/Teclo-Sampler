@@ -24,6 +24,7 @@
         NSURL *sampleURL = [[NSBundle mainBundle] URLForResource:sampleName withExtension:nil];
         AVAudioPlayer *sample = [[AVAudioPlayer alloc] initWithContentsOfURL:sampleURL error:NULL];
         [preset setSample:sample atIndex:[position unsignedIntegerValue]];
+        [sample setEnableRate:YES];
         [sample setNumberOfLoops:-1];
         [sample prepareToPlay];
     }

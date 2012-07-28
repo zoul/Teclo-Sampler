@@ -5,12 +5,13 @@
 @interface TZPlaybackController ()
 @property(strong) IBOutlet UIButton *holdButton;
 @property(strong) IBOutletCollection(UIButton) NSArray *sampleButtons;
+@property(strong) UISlider *tempoSlider;
 @property(assign) NSUInteger lastSampleIndex;
 @property(strong) NSMutableSet *heldSamples;
 @end
 
 @implementation TZPlaybackController
-@synthesize holdButton, samplerPreset, heldSamples, lastSampleIndex, sampleButtons;
+@synthesize holdButton, samplerPreset, heldSamples, lastSampleIndex, sampleButtons, tempoSlider;
 
 #pragma mark Initialization
 
@@ -24,9 +25,23 @@
 - (void) viewDidLoad
 {
     [super viewDidLoad];
-    [holdButton setEnabled:NO];
+
     for (UIButton *button in sampleButtons)
         [button setBackgroundColor:[TZPalette colorForSampleWithIndex:[button tag]]];
+
+    [self setTempoSlider:[[UISlider alloc] init]];
+    [tempoSlider setFrame:CGRectMake(-90, 152, 290, 20)];
+    [tempoSlider setMaximumValue:2];
+    [tempoSlider setMinimumValue:0.001];
+    [tempoSlider setMinimumTrackTintColor:[UIColor grayColor]];
+    [tempoSlider setValue:1];
+    [tempoSlider setTransform:CGAffineTransformMakeRotation(-M_PI_2)];
+    [tempoSlider addTarget:self action:@selector(changeCurrentSampleTempo:)
+        forControlEvents:UIControlEventValueChanged];
+    [[self view] addSubview:tempoSlider];
+
+    [holdButton setEnabled:NO];
+    [tempoSlider setEnabled:NO];
 }
 
 #pragma mark Input
@@ -35,8 +50,19 @@
 {
     NSUInteger index = [button tag];
     NSLog(@"Button #%i down.", index);
+
+    AVAudioPlayer *sample = [samplerPreset sampleAtIndex:index];
     [self setLastSampleIndex:index];
-    [[samplerPreset sampleAtIndex:index] play];
+
+    // Could be already playing if held
+    if (![sample isPlaying]) {
+        [sample play];
+    }
+
+    [tempoSlider setValue:[sample rate]];
+    [tempoSlider setMinimumTrackTintColor:[button backgroundColor]];
+    [tempoSlider setEnabled:YES];
+
     [holdButton setBackgroundColor:[button backgroundColor]];
     [holdButton setEnabled:YES];
 }
@@ -53,6 +79,11 @@
             [button setHighlighted:YES];
         });
     }
+
+    [tempoSlider setValue:1];
+    [tempoSlider setMinimumTrackTintColor:[UIColor grayColor]];
+    [tempoSlider setEnabled:NO];
+
     [holdButton setBackgroundColor:[UIColor grayColor]];
     [holdButton setEnabled:NO];
 }
@@ -67,6 +98,11 @@
         NSLog(@"Holding sample #%i.", lastSampleIndex);
         [heldSamples addObject:index];
     }
+}
+
+- (IBAction) changeCurrentSampleTempo: (UISlider*) sender
+{
+    [[samplerPreset sampleAtIndex:lastSampleIndex] setRate:[sender value]];
 }
 
 @end

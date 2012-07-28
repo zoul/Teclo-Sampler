@@ -15,6 +15,13 @@
 		0D8E031315C420BF000DD4EE /* TZAppFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8E031215C420BF000DD4EE /* TZAppFactory.m */; };
 		0D8E031B15C42186000DD4EE /* TZPlaybackController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8E031915C42186000DD4EE /* TZPlaybackController.m */; };
 		0D8E031C15C42186000DD4EE /* TZPlaybackController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D8E031A15C42186000DD4EE /* TZPlaybackController.xib */; };
+		0D8E032215C425EF000DD4EE /* TZSamplerPreset.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8E032115C425EF000DD4EE /* TZSamplerPreset.m */; };
+		0D8E032415C42603000DD4EE /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8E032315C42603000DD4EE /* AVFoundation.framework */; };
+		0D8E032C15C4270B000DD4EE /* 1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D8E032715C4270B000DD4EE /* 1.wav */; };
+		0D8E032D15C4270B000DD4EE /* 2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D8E032815C4270B000DD4EE /* 2.wav */; };
+		0D8E032E15C4270B000DD4EE /* 3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D8E032915C4270B000DD4EE /* 3.wav */; };
+		0D8E032F15C4270B000DD4EE /* 4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D8E032A15C4270B000DD4EE /* 4.wav */; };
+		0D8E033015C4270B000DD4EE /* sitar.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D8E032B15C4270B000DD4EE /* sitar.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +39,14 @@
 		0D8E031815C42186000DD4EE /* TZPlaybackController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TZPlaybackController.h; path = Playback/TZPlaybackController.h; sourceTree = SOURCE_ROOT; };
 		0D8E031915C42186000DD4EE /* TZPlaybackController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TZPlaybackController.m; path = Playback/TZPlaybackController.m; sourceTree = SOURCE_ROOT; };
 		0D8E031A15C42186000DD4EE /* TZPlaybackController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TZPlaybackController.xib; path = Playback/TZPlaybackController.xib; sourceTree = SOURCE_ROOT; };
+		0D8E032015C425EF000DD4EE /* TZSamplerPreset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TZSamplerPreset.h; path = Model/TZSamplerPreset.h; sourceTree = "<group>"; };
+		0D8E032115C425EF000DD4EE /* TZSamplerPreset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TZSamplerPreset.m; path = Model/TZSamplerPreset.m; sourceTree = "<group>"; };
+		0D8E032315C42603000DD4EE /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		0D8E032715C4270B000DD4EE /* 1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 1.wav; sourceTree = "<group>"; };
+		0D8E032815C4270B000DD4EE /* 2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 2.wav; sourceTree = "<group>"; };
+		0D8E032915C4270B000DD4EE /* 3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 3.wav; sourceTree = "<group>"; };
+		0D8E032A15C4270B000DD4EE /* 4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 4.wav; sourceTree = "<group>"; };
+		0D8E032B15C4270B000DD4EE /* sitar.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sitar.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D8E032415C42603000DD4EE /* AVFoundation.framework in Frameworks */,
 				0D8E02EC15C42034000DD4EE /* UIKit.framework in Frameworks */,
 				0D8E02EE15C42034000DD4EE /* Foundation.framework in Frameworks */,
 				0D8E02F015C42034000DD4EE /* CoreGraphics.framework in Frameworks */,
@@ -51,8 +67,10 @@
 		0D8E02DC15C42034000DD4EE = {
 			isa = PBXGroup;
 			children = (
+				0D8E031F15C425CD000DD4EE /* Model */,
 				0D8E031E15C421D9000DD4EE /* Playback */,
 				0D8E030715C4206B000DD4EE /* Application */,
+				0D8E032515C4270B000DD4EE /* Resources */,
 				0D8E030A15C4206B000DD4EE /* Support */,
 				0D8E02EA15C42034000DD4EE /* Frameworks */,
 				0D8E02E815C42034000DD4EE /* Products */,
@@ -70,6 +88,7 @@
 		0D8E02EA15C42034000DD4EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0D8E032315C42603000DD4EE /* AVFoundation.framework */,
 				0D8E02EB15C42034000DD4EE /* UIKit.framework */,
 				0D8E02ED15C42034000DD4EE /* Foundation.framework */,
 				0D8E02EF15C42034000DD4EE /* CoreGraphics.framework */,
@@ -107,6 +126,35 @@
 			);
 			name = Playback;
 			path = Application;
+			sourceTree = "<group>";
+		};
+		0D8E031F15C425CD000DD4EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0D8E032015C425EF000DD4EE /* TZSamplerPreset.h */,
+				0D8E032115C425EF000DD4EE /* TZSamplerPreset.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0D8E032515C4270B000DD4EE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0D8E032615C4270B000DD4EE /* Samples */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0D8E032615C4270B000DD4EE /* Samples */ = {
+			isa = PBXGroup;
+			children = (
+				0D8E032715C4270B000DD4EE /* 1.wav */,
+				0D8E032815C4270B000DD4EE /* 2.wav */,
+				0D8E032915C4270B000DD4EE /* 3.wav */,
+				0D8E032A15C4270B000DD4EE /* 4.wav */,
+				0D8E032B15C4270B000DD4EE /* sitar.wav */,
+			);
+			path = Samples;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +209,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D8E031C15C42186000DD4EE /* TZPlaybackController.xib in Resources */,
+				0D8E032C15C4270B000DD4EE /* 1.wav in Resources */,
+				0D8E032D15C4270B000DD4EE /* 2.wav in Resources */,
+				0D8E032E15C4270B000DD4EE /* 3.wav in Resources */,
+				0D8E032F15C4270B000DD4EE /* 4.wav in Resources */,
+				0D8E033015C4270B000DD4EE /* sitar.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +228,7 @@
 				0D8E031015C4206B000DD4EE /* main.m in Sources */,
 				0D8E031315C420BF000DD4EE /* TZAppFactory.m in Sources */,
 				0D8E031B15C42186000DD4EE /* TZPlaybackController.m in Sources */,
+				0D8E032215C425EF000DD4EE /* TZSamplerPreset.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,11 +287,13 @@
 		0D8E030015C42034000DD4EE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Support/Prefix.pch;
 				INFOPLIST_FILE = Support/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -245,11 +301,13 @@
 		0D8E030115C42034000DD4EE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Support/Prefix.pch;
 				INFOPLIST_FILE = Support/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

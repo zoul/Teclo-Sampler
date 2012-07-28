@@ -1,0 +1,258 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0D8E02EC15C42034000DD4EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8E02EB15C42034000DD4EE /* UIKit.framework */; };
+		0D8E02EE15C42034000DD4EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8E02ED15C42034000DD4EE /* Foundation.framework */; };
+		0D8E02F015C42034000DD4EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8E02EF15C42034000DD4EE /* CoreGraphics.framework */; };
+		0D8E030E15C4206B000DD4EE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8E030915C4206B000DD4EE /* AppDelegate.m */; };
+		0D8E031015C4206B000DD4EE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8E030C15C4206B000DD4EE /* main.m */; };
+		0D8E031315C420BF000DD4EE /* TZAppFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8E031215C420BF000DD4EE /* TZAppFactory.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0D8E02E715C42034000DD4EE /* Teclo Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Teclo Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D8E02EB15C42034000DD4EE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0D8E02ED15C42034000DD4EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0D8E02EF15C42034000DD4EE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0D8E030815C4206B000DD4EE /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		0D8E030915C4206B000DD4EE /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		0D8E030B15C4206B000DD4EE /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D8E030C15C4206B000DD4EE /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0D8E030D15C4206B000DD4EE /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		0D8E031115C420BF000DD4EE /* TZAppFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TZAppFactory.h; sourceTree = "<group>"; };
+		0D8E031215C420BF000DD4EE /* TZAppFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TZAppFactory.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0D8E02E415C42034000DD4EE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D8E02EC15C42034000DD4EE /* UIKit.framework in Frameworks */,
+				0D8E02EE15C42034000DD4EE /* Foundation.framework in Frameworks */,
+				0D8E02F015C42034000DD4EE /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0D8E02DC15C42034000DD4EE = {
+			isa = PBXGroup;
+			children = (
+				0D8E030715C4206B000DD4EE /* Application */,
+				0D8E030A15C4206B000DD4EE /* Support */,
+				0D8E02EA15C42034000DD4EE /* Frameworks */,
+				0D8E02E815C42034000DD4EE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0D8E02E815C42034000DD4EE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0D8E02E715C42034000DD4EE /* Teclo Sampler.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0D8E02EA15C42034000DD4EE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0D8E02EB15C42034000DD4EE /* UIKit.framework */,
+				0D8E02ED15C42034000DD4EE /* Foundation.framework */,
+				0D8E02EF15C42034000DD4EE /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0D8E030715C4206B000DD4EE /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				0D8E031115C420BF000DD4EE /* TZAppFactory.h */,
+				0D8E031215C420BF000DD4EE /* TZAppFactory.m */,
+				0D8E030815C4206B000DD4EE /* AppDelegate.h */,
+				0D8E030915C4206B000DD4EE /* AppDelegate.m */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		0D8E030A15C4206B000DD4EE /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				0D8E030B15C4206B000DD4EE /* Info.plist */,
+				0D8E030C15C4206B000DD4EE /* main.m */,
+				0D8E030D15C4206B000DD4EE /* Prefix.pch */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0D8E02E615C42034000DD4EE /* Teclo Sampler */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D8E02FF15C42034000DD4EE /* Build configuration list for PBXNativeTarget "Teclo Sampler" */;
+			buildPhases = (
+				0D8E02E315C42034000DD4EE /* Sources */,
+				0D8E02E415C42034000DD4EE /* Frameworks */,
+				0D8E02E515C42034000DD4EE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Teclo Sampler";
+			productName = "Teclo Sampler";
+			productReference = 0D8E02E715C42034000DD4EE /* Teclo Sampler.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0D8E02DE15C42034000DD4EE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Tomáš Znamenáček";
+			};
+			buildConfigurationList = 0D8E02E115C42034000DD4EE /* Build configuration list for PBXProject "Teclo Sampler" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0D8E02DC15C42034000DD4EE;
+			productRefGroup = 0D8E02E815C42034000DD4EE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0D8E02E615C42034000DD4EE /* Teclo Sampler */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0D8E02E515C42034000DD4EE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0D8E02E315C42034000DD4EE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D8E030E15C4206B000DD4EE /* AppDelegate.m in Sources */,
+				0D8E031015C4206B000DD4EE /* main.m in Sources */,
+				0D8E031315C420BF000DD4EE /* TZAppFactory.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0D8E02FD15C42034000DD4EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		0D8E02FE15C42034000DD4EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0D8E030015C42034000DD4EE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Support/Prefix.pch;
+				INFOPLIST_FILE = Support/Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		0D8E030115C42034000DD4EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Support/Prefix.pch;
+				INFOPLIST_FILE = Support/Info.plist;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0D8E02E115C42034000DD4EE /* Build configuration list for PBXProject "Teclo Sampler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D8E02FD15C42034000DD4EE /* Debug */,
+				0D8E02FE15C42034000DD4EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D8E02FF15C42034000DD4EE /* Build configuration list for PBXNativeTarget "Teclo Sampler" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D8E030015C42034000DD4EE /* Debug */,
+				0D8E030115C42034000DD4EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0D8E02DE15C42034000DD4EE /* Project object */;
+}

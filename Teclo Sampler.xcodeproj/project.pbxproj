@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D7B6D7B15C432A4001A49A1 /* TZPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B6D7A15C432A4001A49A1 /* TZPalette.m */; };
+		0D7B6D7F15C43AFF001A49A1 /* TZSampleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B6D7E15C43AFF001A49A1 /* TZSampleButton.m */; };
 		0D8E02EC15C42034000DD4EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8E02EB15C42034000DD4EE /* UIKit.framework */; };
 		0D8E02EE15C42034000DD4EE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8E02ED15C42034000DD4EE /* Foundation.framework */; };
 		0D8E02F015C42034000DD4EE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8E02EF15C42034000DD4EE /* CoreGraphics.framework */; };
@@ -28,6 +29,8 @@
 /* Begin PBXFileReference section */
 		0D7B6D7915C432A4001A49A1 /* TZPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TZPalette.h; path = Rendering/TZPalette.h; sourceTree = SOURCE_ROOT; };
 		0D7B6D7A15C432A4001A49A1 /* TZPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TZPalette.m; path = Rendering/TZPalette.m; sourceTree = SOURCE_ROOT; };
+		0D7B6D7D15C43AFF001A49A1 /* TZSampleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TZSampleButton.h; path = Rendering/TZSampleButton.h; sourceTree = SOURCE_ROOT; };
+		0D7B6D7E15C43AFF001A49A1 /* TZSampleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TZSampleButton.m; path = Rendering/TZSampleButton.m; sourceTree = SOURCE_ROOT; };
 		0D8E02E715C42034000DD4EE /* Teclo Sampler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Teclo Sampler.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D8E02EB15C42034000DD4EE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0D8E02ED15C42034000DD4EE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -72,6 +75,8 @@
 			children = (
 				0D7B6D7915C432A4001A49A1 /* TZPalette.h */,
 				0D7B6D7A15C432A4001A49A1 /* TZPalette.m */,
+				0D7B6D7D15C43AFF001A49A1 /* TZSampleButton.h */,
+				0D7B6D7E15C43AFF001A49A1 /* TZSampleButton.m */,
 			);
 			name = Rendering;
 			path = Application;
@@ -244,6 +249,7 @@
 				0D8E031B15C42186000DD4EE /* TZPlaybackController.m in Sources */,
 				0D8E032215C425EF000DD4EE /* TZSamplerPreset.m in Sources */,
 				0D7B6D7B15C432A4001A49A1 /* TZPalette.m in Sources */,
+				0D7B6D7F15C43AFF001A49A1 /* TZSampleButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

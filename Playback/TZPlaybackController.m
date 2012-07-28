@@ -1,10 +1,10 @@
 #import "TZPlaybackController.h"
 #import "TZSamplerPreset.h"
-#import "TZPalette.h"
+#import "TZSampleButton.h"
 
 @interface TZPlaybackController ()
 @property(strong) IBOutlet UIButton *holdButton;
-@property(strong) IBOutletCollection(UIButton) NSArray *sampleButtons;
+@property(strong) IBOutletCollection(TZSampleButton) NSArray *sampleButtons;
 @property(strong) UISlider *tempoSlider;
 @property(assign) NSUInteger lastSampleIndex;
 @property(strong) NSMutableSet *heldSamples;
@@ -25,30 +25,37 @@
 - (void) viewDidLoad
 {
     [super viewDidLoad];
+    [holdButton setEnabled:NO];
 
-    for (UIButton *button in sampleButtons)
-        [button setBackgroundColor:[TZPalette colorForSampleWithIndex:[button tag]]];
+    for (TZSampleButton *button in sampleButtons) {
+        [button addTarget:self
+            action:@selector(sampleButtonDown:)
+            forControlEvents:UIControlEventTouchDown];
+        [button addTarget:self
+            action:@selector(sampleButtonUp:)
+            forControlEvents:UIControlEventTouchUpInside];
+        [button setSample:[samplerPreset sampleAtIndex:[button tag]]];
+        [button setIndex:[button tag]];
+    }
 
     [self setTempoSlider:[[UISlider alloc] init]];
-    [tempoSlider setFrame:CGRectMake(-90, 152, 290, 20)];
+    [tempoSlider setFrame:CGRectMake(-92, 158, 292, 20)];
     [tempoSlider setMaximumValue:2];
     [tempoSlider setMinimumValue:0.001];
     [tempoSlider setMinimumTrackTintColor:[UIColor grayColor]];
+    [tempoSlider setEnabled:NO];
     [tempoSlider setValue:1];
     [tempoSlider setTransform:CGAffineTransformMakeRotation(-M_PI_2)];
     [tempoSlider addTarget:self action:@selector(changeCurrentSampleTempo:)
         forControlEvents:UIControlEventValueChanged];
     [[self view] addSubview:tempoSlider];
-
-    [holdButton setEnabled:NO];
-    [tempoSlider setEnabled:NO];
 }
 
 #pragma mark Input
 
-- (IBAction) sampleButtonDown: (UIButton*) button
+- (IBAction) sampleButtonDown: (TZSampleButton*) button
 {
-    NSUInteger index = [button tag];
+    NSUInteger index = [button index];
     NSLog(@"Button #%i down.", index);
 
     AVAudioPlayer *sample = [samplerPreset sampleAtIndex:index];
@@ -57,23 +64,25 @@
     // Could be already playing if held
     if (![sample isPlaying]) {
         [sample play];
+        [button setNeedsDisplay];
     }
 
     [tempoSlider setValue:[sample rate]];
-    [tempoSlider setMinimumTrackTintColor:[button backgroundColor]];
+    [tempoSlider setMinimumTrackTintColor:[button color]];
     [tempoSlider setEnabled:YES];
 
-    [holdButton setBackgroundColor:[button backgroundColor]];
+    [holdButton setBackgroundColor:[button color]];
     [holdButton setEnabled:YES];
 }
 
-- (IBAction) sampleButtonUp: (UIButton*) button
+- (IBAction) sampleButtonUp: (TZSampleButton*) button
 {
-    NSUInteger index = [button tag];
+    NSUInteger index = [button index];
     NSLog(@"Button #%i up.", index);
     if (![heldSamples containsObject:@(index)]) {
         [[samplerPreset sampleAtIndex:index] stop];
         [[samplerPreset sampleAtIndex:index] setCurrentTime:0];
+        [button setNeedsDisplay];
     } else {
         dispatch_async(dispatch_get_main_queue(), ^{
             [button setHighlighted:YES];

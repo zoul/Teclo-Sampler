@@ -8,6 +8,7 @@
 {
     TZAppFactory *factory = [[TZAppFactory alloc] init];
     [self setWindow:[factory buildMainWindow]];
+    [application setIdleTimerDisabled:YES];
     [window makeKeyAndVisible];
     return YES;
 }

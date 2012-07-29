@@ -23,9 +23,10 @@
 		0D8E032D15C4270B000DD4EE /* 2.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D8E032815C4270B000DD4EE /* 2.wav */; };
 		0D8E032E15C4270B000DD4EE /* 3.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D8E032915C4270B000DD4EE /* 3.wav */; };
 		0D8E032F15C4270B000DD4EE /* 4.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D8E032A15C4270B000DD4EE /* 4.wav */; };
-		0D8E033015C4270B000DD4EE /* sitar.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0D8E032B15C4270B000DD4EE /* sitar.wav */; };
 		0DE315BF15C44C0100164090 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DE315BD15C44C0100164090 /* Icon.png */; };
 		0DE315C015C44C0100164090 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0DE315BE15C44C0100164090 /* Icon@2x.png */; };
+		0DF7A92215C553F3003AFFCF /* 5.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0DF7A92015C553F3003AFFCF /* 5.wav */; };
+		0DF7A92315C553F3003AFFCF /* 6.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0DF7A92115C553F3003AFFCF /* 6.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,9 +55,10 @@
 		0D8E032815C4270B000DD4EE /* 2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 2.wav; sourceTree = "<group>"; };
 		0D8E032915C4270B000DD4EE /* 3.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 3.wav; sourceTree = "<group>"; };
 		0D8E032A15C4270B000DD4EE /* 4.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 4.wav; sourceTree = "<group>"; };
-		0D8E032B15C4270B000DD4EE /* sitar.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = sitar.wav; sourceTree = "<group>"; };
 		0DE315BD15C44C0100164090 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		0DE315BE15C44C0100164090 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		0DF7A92015C553F3003AFFCF /* 5.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 5.wav; sourceTree = "<group>"; };
+		0DF7A92115C553F3003AFFCF /* 6.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = 6.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,7 +179,8 @@
 				0D8E032815C4270B000DD4EE /* 2.wav */,
 				0D8E032915C4270B000DD4EE /* 3.wav */,
 				0D8E032A15C4270B000DD4EE /* 4.wav */,
-				0D8E032B15C4270B000DD4EE /* sitar.wav */,
+				0DF7A92015C553F3003AFFCF /* 5.wav */,
+				0DF7A92115C553F3003AFFCF /* 6.wav */,
 			);
 			path = Samples;
 			sourceTree = "<group>";
@@ -238,9 +241,10 @@
 				0D8E032D15C4270B000DD4EE /* 2.wav in Resources */,
 				0D8E032E15C4270B000DD4EE /* 3.wav in Resources */,
 				0D8E032F15C4270B000DD4EE /* 4.wav in Resources */,
-				0D8E033015C4270B000DD4EE /* sitar.wav in Resources */,
 				0DE315BF15C44C0100164090 /* Icon.png in Resources */,
 				0DE315C015C44C0100164090 /* Icon@2x.png in Resources */,
+				0DF7A92215C553F3003AFFCF /* 5.wav in Resources */,
+				0DF7A92315C553F3003AFFCF /* 6.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

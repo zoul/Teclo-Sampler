@@ -5,7 +5,7 @@
 @end
 
 @implementation TZSample
-@synthesize player;
+@synthesize player, held;
 
 #pragma mark Initialization
 

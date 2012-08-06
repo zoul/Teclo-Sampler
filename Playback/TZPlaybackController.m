@@ -8,20 +8,12 @@
 @property(strong) IBOutletCollection(TZSampleButton) NSArray *sampleButtons;
 @property(strong) UISlider *tempoSlider;
 @property(assign) NSUInteger lastSampleIndex;
-@property(strong) NSMutableSet *heldSamples;
 @end
 
 @implementation TZPlaybackController
-@synthesize holdButton, samplerPreset, heldSamples, lastSampleIndex, sampleButtons, tempoSlider;
+@synthesize holdButton, samplerPreset, lastSampleIndex, sampleButtons, tempoSlider;
 
 #pragma mark Initialization
-
-- (id) initWithNibName: (NSString*) nibNameOrNil bundle: (NSBundle*) nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    [self setHeldSamples:[NSMutableSet set]];
-    return self;
-}
 
 - (void) viewDidLoad
 {
@@ -79,10 +71,12 @@
 - (IBAction) sampleButtonUp: (TZSampleButton*) button
 {
     NSUInteger index = [button index];
+    TZSample *sample = [samplerPreset sampleAtIndex:index];
     NSLog(@"Button #%i up.", index);
-    if (![heldSamples containsObject:@(index)]) {
-        [[samplerPreset sampleAtIndex:index] stop];
-        [[samplerPreset sampleAtIndex:index] setCurrentTime:0];
+
+    if (![sample isHeld]) {
+        [sample stop];
+        [sample setCurrentTime:0];
         [button setNeedsDisplay];
     } else {
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -100,13 +94,13 @@
 
 - (IBAction) toggleCurrentSampleHold
 {
-    NSNumber *index = @(lastSampleIndex);
-    if ([heldSamples containsObject:index]) {
+    TZSample *sample = [samplerPreset sampleAtIndex:lastSampleIndex];
+    if ([sample isHeld]) {
         NSLog(@"Unholding sample #%i.", lastSampleIndex);
-        [heldSamples removeObject:index];
+        [sample setHeld:NO];
     } else {
         NSLog(@"Holding sample #%i.", lastSampleIndex);
-        [heldSamples addObject:index];
+        [sample setHeld:YES];
     }
 }
 

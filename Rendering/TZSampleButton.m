@@ -1,5 +1,6 @@
 #import "TZSampleButton.h"
 #import "TZPalette.h"
+#import "TZSample.h"
 
 @implementation TZSampleButton
 @synthesize sample, index, color;

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D263A0C15D01E88001F61D3 /* TZSample.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D263A0B15D01E88001F61D3 /* TZSample.m */; };
 		0D7B6D7B15C432A4001A49A1 /* TZPalette.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B6D7A15C432A4001A49A1 /* TZPalette.m */; };
 		0D7B6D7F15C43AFF001A49A1 /* TZSampleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D7B6D7E15C43AFF001A49A1 /* TZSampleButton.m */; };
 		0D8E02EC15C42034000DD4EE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D8E02EB15C42034000DD4EE /* UIKit.framework */; };
@@ -30,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0D263A0A15D01E88001F61D3 /* TZSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TZSample.h; path = Model/TZSample.h; sourceTree = "<group>"; };
+		0D263A0B15D01E88001F61D3 /* TZSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TZSample.m; path = Model/TZSample.m; sourceTree = "<group>"; };
 		0D7B6D7915C432A4001A49A1 /* TZPalette.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TZPalette.h; path = Rendering/TZPalette.h; sourceTree = SOURCE_ROOT; };
 		0D7B6D7A15C432A4001A49A1 /* TZPalette.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TZPalette.m; path = Rendering/TZPalette.m; sourceTree = SOURCE_ROOT; };
 		0D7B6D7D15C43AFF001A49A1 /* TZSampleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TZSampleButton.h; path = Rendering/TZSampleButton.h; sourceTree = SOURCE_ROOT; };
@@ -156,6 +159,8 @@
 		0D8E031F15C425CD000DD4EE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0D263A0A15D01E88001F61D3 /* TZSample.h */,
+				0D263A0B15D01E88001F61D3 /* TZSample.m */,
 				0D8E032015C425EF000DD4EE /* TZSamplerPreset.h */,
 				0D8E032115C425EF000DD4EE /* TZSamplerPreset.m */,
 			);
@@ -262,6 +267,7 @@
 				0D8E032215C425EF000DD4EE /* TZSamplerPreset.m in Sources */,
 				0D7B6D7B15C432A4001A49A1 /* TZPalette.m in Sources */,
 				0D7B6D7F15C43AFF001A49A1 /* TZSampleButton.m in Sources */,
+				0D263A0C15D01E88001F61D3 /* TZSample.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

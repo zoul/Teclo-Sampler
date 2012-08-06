@@ -1,6 +1,7 @@
 #import "TZPlaybackController.h"
 #import "TZSamplerPreset.h"
 #import "TZSampleButton.h"
+#import "TZSample.h"
 
 @interface TZPlaybackController ()
 @property(strong) IBOutlet UIButton *holdButton;
@@ -58,7 +59,7 @@
     NSUInteger index = [button index];
     NSLog(@"Button #%i down.", index);
 
-    AVAudioPlayer *sample = [samplerPreset sampleAtIndex:index];
+    TZSample *sample = [samplerPreset sampleAtIndex:index];
     [self setLastSampleIndex:index];
 
     // Could be already playing if held

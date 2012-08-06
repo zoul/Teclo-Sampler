@@ -1,4 +1,5 @@
 #import "TZSamplerPreset.h"
+#import "TZSample.h"
 
 @interface TZSamplerPreset ()
 @property(strong) NSMutableDictionary *samples;
@@ -22,18 +23,15 @@
     for (NSNumber *position  in [layout allKeys]) {
         NSString *sampleName = [layout objectForKey:position];
         NSURL *sampleURL = [[NSBundle mainBundle] URLForResource:sampleName withExtension:nil];
-        AVAudioPlayer *sample = [[AVAudioPlayer alloc] initWithContentsOfURL:sampleURL error:NULL];
+        TZSample *sample = [[TZSample alloc] initWithContentsOfURL:sampleURL error:NULL];
         [preset setSample:sample atIndex:[position unsignedIntegerValue]];
-        [sample setEnableRate:YES];
-        [sample setNumberOfLoops:-1];
-        [sample prepareToPlay];
     }
     return preset;
 }
 
 #pragma mark Sample Management
 
-- (void) setSample: (AVAudioPlayer*) sample atIndex: (NSUInteger) index
+- (void) setSample: (TZSample*) sample atIndex: (NSUInteger) index
 {
     if (sample) {
         [samples setObject:sample forKey:@(index)];
@@ -42,7 +40,7 @@
     }
 }
 
-- (AVAudioPlayer*) sampleAtIndex: (NSUInteger) index
+- (TZSample*) sampleAtIndex: (NSUInteger) index
 {
     return [samples objectForKey:@(index)];
 }

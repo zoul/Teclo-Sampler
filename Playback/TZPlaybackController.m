@@ -95,6 +95,7 @@
 - (IBAction) toggleCurrentSampleHold
 {
     TZSample *sample = [samplerPreset sampleAtIndex:lastSampleIndex];
+    [[self buttonForSample:lastSampleIndex] setNeedsDisplay];
     if ([sample isHeld]) {
         NSLog(@"Unholding sample #%i.", lastSampleIndex);
         [sample setHeld:NO];
@@ -107,6 +108,16 @@
 - (IBAction) changeCurrentSampleTempo: (UISlider*) sender
 {
     [[samplerPreset sampleAtIndex:lastSampleIndex] setRate:[sender value]];
+}
+
+#pragma mark Helpers
+
+- (UIButton*) buttonForSample: (NSUInteger) sampleNo
+{
+    for (id candidate in sampleButtons)
+        if ([candidate tag] == sampleNo)
+            return candidate;
+    return nil;
 }
 
 @end

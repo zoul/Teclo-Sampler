@@ -29,6 +29,13 @@
     UIFont *labelFont = [UIFont boldSystemFontOfSize:15];
     CGContextSetFillColorWithColor(ctx, [[UIColor whiteColor] CGColor]);
     [label drawAtPoint:labelOrigin withFont:labelFont];
+
+    // Draw hold indicator
+    if ([sample isHeld]) {
+        float holdIndicatorHeight = 20;
+        CGContextSetFillColorWithColor(ctx, [[UIColor whiteColor] CGColor]);
+        CGContextFillRect(ctx, CGRectMake(0, CGRectGetHeight([self bounds])-holdIndicatorHeight, CGRectGetWidth([self bounds]), holdIndicatorHeight));
+    }
 }
 
 @end
